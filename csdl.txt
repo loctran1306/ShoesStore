@@ -1,0 +1,45 @@
++------------------+      +-----------------+       +----------------------+
+|      Users       |      |      Orders     |       |       Products       |
++------------------+      +-----------------+       +----------------------+
+| id               |      | id              |       | id                   |
+| username         |      | user_id         |       | name                 |
+| password         |      | total_price     |       | description          |
+| email            | 1---<| created_at      |   1---| price                |
+| first_name       |      | updated_at      |       | image_url            |
+| last_name        |      +-----------------+       | ...                  |
+| phone_number     |                                +----------------------+
+| address          |
+| created_at       |
+| updated_at       |
++------------------+
+
++------------------+      +---------------------+    +----------------------+
+|      Carts       |      |    CartItems         |    |      Sales           |
++------------------+      +---------------------+    +----------------------+
+| id               |      | id                  |    | id                   |
+| user_id          |      | cart_id             |    | product_id           |
+| created_at       |      | product_id          |    | discount_percentage  |
+| updated_at       |      | quantity            |    | start_date            |
++------------------+      | total_price         |    | end_date              |
+                          | created_at          |    +----------------------+
+                          | updated_at          |
+                          +---------------------+
+
++------------------+      +---------------------+
+|     Reviews      |      |  ProductCategories  |
++------------------+      +---------------------+
+| id               |      | product_id          |
+| user_id          |      | category_id         |
+| product_id       |      +---------------------+
+| rating           |
+| comment          |
+| created_at       |
++------------------+
+
++------------------+      +---------------------+
+|   Categories     |      |   ProductImages     |
++------------------+      +---------------------+
+| id               |      | id                  |
+| name             |      | product_id          |
++------------------+      | image_url           |
+                          +---------------------+
